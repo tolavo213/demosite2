@@ -1,0 +1,74 @@
+@use '../global' as *;
+
+.btn {
+    display: inline-flex;
+    width: rem(290);
+    height: rem(76);
+    justify-content: center;
+    align-items: center;
+    font-size: rem(16);
+    line-height: calc(16 / 16);
+    color: $gray;
+    font-weight: $W3;
+    padding: rem(10);
+    border: 1px solid $gray;
+    position: relative;
+    background-color: $white;
+    transition: background-color .7s, color .7s;
+}
+
+.btn:hover {
+    background-color: $darkblue;
+    color: $white;
+    opacity: 1;
+}
+
+
+// 矢印の横線
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(16);
+    transform: translateY(-50%);
+    width: rem(58);
+    height: 1px;
+    background-color: $gray;
+    transition: right .7s;
+
+    @include mq(md) {
+        width: rem(80);
+        right: rem(-51);
+    }
+}
+
+.btn:hover::before {
+    @include mq(md) {
+        right: rem(-67);
+    }
+}
+
+// 矢印の斜め線
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(16);
+    transform: translateY(-50%);
+    width: rem(20);
+    height: 1px;
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+    background-color: $gray;
+    transition: right .7s;
+
+    @include mq(md) {
+        right: rem(-51);
+    }
+}
+
+.btn:hover::after {
+    @include mq(md) {
+        right: rem(-67);
+    }
+}

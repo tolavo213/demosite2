@@ -1,0 +1,13 @@
+@use '../global' as *;
+
+.p-treatment-items{
+    @include mq(md){
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: rem(173);
+        max-width: 1320px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

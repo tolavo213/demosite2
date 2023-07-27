@@ -1,0 +1,18 @@
+@use '../global' as *;
+
+.p-treatment-examination{
+    margin-top: rem(80);
+    @include mq(md){
+        margin-top: rem(156);
+    }
+}
+
+
+.p-treatment-examination__items{
+    margin-top: rem(40);
+    margin-bottom: rem(100);
+    @include mq(md){
+        margin-top: rem(60);
+        margin-bottom: rem(200);
+    }
+}

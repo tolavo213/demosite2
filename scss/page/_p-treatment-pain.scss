@@ -1,0 +1,16 @@
+@use '../global' as *;
+
+
+.p-treatment-pain{
+    margin-top: rem(80);
+    @include mq(md){
+        margin-top: rem(114);
+    }
+}
+
+.p-treatment-pain__items{
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: rem(60);
+    }
+}

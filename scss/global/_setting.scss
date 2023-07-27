@@ -1,0 +1,23 @@
+@use 'sass:math';
+
+// インナー幅設定(pxのまま)
+$inner: 1520px;
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 20px;
+
+// font-family
+$base-font:"hiragino-kaku-gothic-pron", sans-serif;
+
+// font-weight
+$W3: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+body {
+  font-family: $base-font;
+  font-weight: $W3;
+}
+

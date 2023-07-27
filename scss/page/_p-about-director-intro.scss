@@ -1,0 +1,104 @@
+@use '../global' as *;
+
+.p-about-director-intro {
+    margin-top: rem(72);
+
+    @include mq(md) {
+        margin-top: rem(130);
+    }
+}
+
+.p-about-director-intro__title {
+    font-size: rem(26);
+    line-height: calc(26 / 26);
+    color: $darkblue;
+    text-align: center;
+
+    @include mq(md) {
+        font-size: rem(40);
+    }
+}
+
+.p-about-director-intro__img-wrap {
+    margin-top: rem(40);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    position: relative;
+    z-index: -1;
+
+    @include mq(md) {
+        margin-top: rem(80);
+        margin-left: initial;
+        margin-right: auto;
+        width: calc(1028 / 1520 * 100%);
+    }
+}
+
+
+
+.p-about-director-intro__content {
+    width: 100%;
+    margin-top: rem(-50);
+    background-color: $white;
+    padding: rem(70)rem(20) rem(60);
+    box-shadow: rem(2) rem(2) rem(6) rgba($color: $black, $alpha: 0.05);
+
+    @include mq(md) {
+        width: calc(880 / 1520 * 100%);
+        margin-top: rem(-486);
+        padding: rem(80) rem(40);
+        margin-left: auto;
+    }
+}
+
+
+.p-about-director-intro__text {
+    font-size: rem(14);
+    line-height: calc(24 / 14);
+
+    @include mq(md) {
+        font-size: rem(24);
+        line-height: calc(41 / 24);
+    }
+}
+
+.p-about-director-intro__text:not(:first-child) {
+    margin-top: rem(5);
+
+    @include mq(md) {
+        margin-top: 0;
+    }
+}
+
+.p-about-director-intro__text.p-about-director-intro__text--large {
+    margin-top: rem(40);
+    font-size: rem(20);
+    line-height: calc(34 / 20);
+
+    @include mq(md) {
+        font-size: rem(30);
+        line-height: calc(51 / 30);
+    }
+}
+
+.p-about-director-intro__sign {
+    margin-top: rem(32);
+    font-size: rem(14);
+    line-height: calc(14 / 14);
+    color: $black;
+    text-align: right;
+    @include mq(md){
+        margin-top: rem(60);
+        font-size: rem(16);
+    }
+}
+
+.p-about-director-intro__sign-img {
+    margin-top: rem(8);
+    width: rem(100);
+    margin-left: auto;
+    @include mq(md){
+        margin-top: rem(10);
+        width: rem(166);
+    }
+}

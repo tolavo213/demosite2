@@ -1,0 +1,54 @@
+@use '../global' as *;
+
+
+.p-contact-fin{
+    padding-top: rem(46);
+    padding-bottom: rem(100);
+    @include mq(md){
+        padding-top: rem(130);
+        padding-bottom: rem(200);
+    }
+}
+
+.p-contact-fin__img {
+    width: rem(60);
+    margin-right: auto;
+    margin-left: auto;
+    @include mq(md) {
+        width: rem(70);
+    }
+}
+
+.p-contact-fin__title {
+    font-size: rem(26);
+    line-height: calc(26 / 26);
+    color: $gray;
+    font-weight: $W3;
+    margin-top: rem(12);
+    text-align: center;
+    @include mq(md) {
+        font-size: rem(30);
+        margin-top: rem(12);
+    }
+}
+
+.p-contact-fin__text {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: rem(16);
+    line-height: calc(27 / 16);
+    color: $gray;
+    font-weight: $W3;
+    margin-top: rem(40);
+    text-align: center;
+}
+
+.p-contact-fin__btn{
+    width: rem(290);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: rem(80);
+    @include mq(md){
+        width: rem(320);
+    }
+}

@@ -1,0 +1,19 @@
+@use '../global' as *;
+
+.blue-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $darkblue;
+    height: rem(76);
+    font-size:rem(16);
+    line-height: calc(16 / 16);
+    color: $white;
+    padding-left: rem(10);
+    padding-right: rem(10);
+    @include mq(md){
+        width: rem(320);
+        height: rem(80);
+        font-size: rem(18);
+    }
+}

@@ -1,0 +1,151 @@
+@use '../global' as *;
+
+.p-top-news {
+    margin-top: rem(60);
+
+    @include mq(md) {
+        margin-top: rem(160);
+    }
+}
+
+
+.p-top-news__inner {
+    width: 100%;
+    padding-right: rem(37);
+    padding-left: rem(38);
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq('md') {
+        max-width: calc(1300px + $padding-pc*2);
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+    }
+}
+
+.p-top-news__lists {
+    margin-top: rem(40);
+
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+
+.p-top-news__list{
+    @include mq(md){
+        position: relative;
+    }
+}
+
+.p-top-news__list:not(:last-of-type){
+    border-bottom: 1px solid $gray;
+}
+
+.p-top-news__list-link{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: rem(20);
+    @include mq(md){
+        flex-wrap: nowrap;
+        padding-left: rem(87);
+        padding-right: rem(87);
+        padding-bottom: rem(40);
+    }
+}
+
+.p-top-news__list-time time{
+    font-size:rem(14);
+    line-height: calc(14 / 14);
+    color:$gray;
+    font-weight:$W3;
+    @include mq(md){
+        width: calc(92 / 1124 * 100%);
+    }
+}
+
+.p-top-news__list-label{
+    margin-left: rem(22);
+    @include mq(md){
+        width: calc(199 / 1124 * 100%);
+        // margin-right: rem(22);
+    }
+}
+
+.p-top-news__list-label span{
+    display: inline-block;
+    font-size:rem(14);
+    line-height: calc(14 / 14);
+    color:$orange;
+    font-weight:$W3;
+    border: 1px solid $orange;
+    padding: rem(8) rem(6);
+}
+
+.p-top-news__list-title{
+    width: 100%;
+    font-size:rem(14);
+    line-height: calc(14 / 14);
+    color:$gray;
+    font-weight:$W3;
+    margin-top: rem(20);
+    @include mq(md){
+        width: calc(833 / 1124 * 100%);
+        margin-right: rem(138);
+        margin-top: 0;
+        margin-left: rem(22);
+    }
+}
+
+.p-top-news__list:not(:first-child){
+    margin-top: rem(32);
+}
+
+// 矢印の横線
+.p-top-news__list::before{
+    @include mq(md){
+    content: "";
+    position: absolute;
+    top: rem(30);
+    right: rem(87);
+    width: rem(58);
+    height: 1px;
+    background-color: $gray;
+    transition: all .5s ease;
+    }
+  }
+  .p-top-news__list:hover::before{
+    @include mq(md){
+    right: rem(67);
+    }
+  }
+  // 矢印の斜め線
+  .p-top-news__list::after{
+    @include mq(md){
+    content: "";
+    position: absolute;
+    top: rem(30);
+    right: rem(87);
+    width: rem(20);
+    height: 1px;
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+    background-color: $gray;
+    transition: all .5s ease;
+    }
+  }
+  .p-top-news__list:hover::after{
+    @include mq(md){
+      right: rem(67);
+    }
+  }
+
+  .p-top-news__btn-wrap{
+    margin-top: rem(40);
+    text-align: center;
+    @include mq(md){
+        margin-top: rem(40);
+    }
+  }

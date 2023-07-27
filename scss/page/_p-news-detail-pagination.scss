@@ -1,0 +1,76 @@
+@use '../global' as *;
+
+.p-news-detail-pagination {
+    margin-top: rem(80);
+    width: rem(290);
+    margin-right: auto;
+    margin-left: auto;
+    @include mq(md) {
+        margin-top: rem(100);
+        width: rem(404);
+    }
+}
+
+.p-news-detail-pagination .nav-links{
+    display: grid;
+    grid-template:
+    "back  ....  next"
+    "....  ....  ...."rem(24)
+    "btn  btn  btn"
+    /rem(101) auto rem(101);
+    @include mq(md){
+        gap: rem(12);
+        }
+
+}
+
+.p-news-detail-pagination__item--btn{
+    grid-area: btn;
+    margin-right: auto;
+    margin-left: auto;
+}
+.p-news-detail-pagination .page-numbers.prev{
+    grid-area: back;
+    text-align: right;
+}
+.p-news-detail-pagination .page-numbers.next{
+    grid-area: next;
+}
+
+
+.p-news-detail-pagination .page-numbers.prev,
+.p-news-detail-pagination .page-numbers.next{
+    font-size:rem(18);
+    line-height: calc(18 / 18);
+    color:$darkblue;
+    position: relative;
+}
+
+
+.p-news-detail-pagination .page-numbers.prev::after{
+        content: "";
+    position: absolute;
+    top: rem(4);
+    left: rem(3);
+    width: rem(10);
+	height: rem(10);
+	transform: rotate(-45deg);
+	border: 2px solid $gray;
+    border-radius: rem(1);
+    border-bottom: none;
+    border-right: none;
+}
+
+.p-news-detail-pagination .page-numbers.next::after{
+    content: "";
+position: absolute;
+top: rem(4);
+right: rem(3);
+width: rem(10);
+height: rem(10);
+transform: rotate(-45deg);
+border: 2px solid $gray;
+border-radius: rem(1);
+border-top: none;
+border-left: none;
+}

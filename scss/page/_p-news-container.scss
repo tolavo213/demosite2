@@ -1,0 +1,30 @@
+@use '../global' as *;
+
+.p-news-container{
+    padding-top: rem(46);
+    padding-bottom: rem(100);
+    display: grid;
+    grid-template: 
+    "lists"
+    "pagination"
+    "sidebar";   
+    @include mq(md){
+        margin-left:rem(60) ;
+        padding-top: rem(130);
+        padding-bottom: rem(200);
+        grid-template: 
+        "lists                    .....    sidebar"
+        "pagination               .....    ....."
+        /calc(1100 / 1520 * 100%) 1fr      calc(300 / 1520 * 100%);
+    }
+}
+
+.p-news-lists{
+    grid-area: lists;
+}
+.p-news-pagination{
+    grid-area: pagination;
+}
+.p-news-sidebar{
+    grid-area: sidebar;
+}

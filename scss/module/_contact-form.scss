@@ -1,0 +1,146 @@
+@use '../global' as *;
+
+.p-contact-form form{
+    margin-top: rem(80);
+    background-color: $skyblue;
+    padding-top: rem(60);
+    padding-bottom: rem(100);
+    margin-bottom: rem(100);
+    box-shadow: 2px 2px 6px rgba($color: $black, $alpha: 0.05);
+    @include mq(md){
+        margin-top: rem(120);
+        padding-top:rem(120) ;
+        padding-bottom: rem(120);
+        margin-bottom: rem(200);
+        width: calc(1000 / 1520 * 100%);
+        max-width: 1520px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+.contact-form__inner {
+    width: calc(335 / 375 * 100%);
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    @include mq(md){
+        width: rem(752);
+        max-width: none;
+    }
+}
+
+.contact-form__item{
+    @include mq(md){
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
+.contact-form__item:not(:first-child) {
+    margin-top: rem(38);
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}
+
+.contact-form-item__label-area {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+}
+
+.contact-form-item__label {
+    font-size: rem(16);
+    line-height: calc(16 / 16);
+    color: $gray;
+}
+
+.contact-form-item__label-must {
+    font-size: rem(16);
+    line-height: calc(16 / 16);
+    color: $red;
+    border: 1px solid $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(5) rem(6);
+}
+
+.contact-form-item__input-area {
+    margin-top: rem(14);
+    @include mq(md){
+        margin-left: auto;
+        margin-top: 0;
+    }
+}
+
+.contact-form-item__input-area input,
+.contact-form-item__input-area textarea {
+    display: inline-block;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: $white;
+    padding: rem(17) rem(18);
+    @include mq(md){
+        width: rem(500);
+    }
+}
+
+.contact-form-item__input-area input::placeholder,
+.contact-form-item__input-area textarea::placeholder {
+    font-size: rem(16);
+    line-height: calc(27 / 16);
+    color: $gray2;
+}
+
+
+.contact-form-item__input-area textarea{
+    width: 100%;
+    height: rem(217);
+    @include mq(md){
+        width: rem(500);
+    }
+}
+
+.contact-form__annotation{
+    margin-top: rem(60);
+    font-size:rem(14);
+    line-height: calc(24 / 14);
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contact-form__btn-wrap{
+    margin-top: rem(60);
+    width: rem(290);
+    margin-right: auto;
+    margin-left: auto;
+    @include mq(md){
+        width: calc(320 / 1000 * 100%);
+        margin-top: rem(80);
+    }
+}
+
+.contact-form__btn.blue-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $darkblue;
+    height: rem(76);
+    font-size:rem(16);
+    line-height: calc(16 / 16);
+    color: $white;
+    padding-left: rem(10);
+    padding-right: rem(10);
+    width: 100%;
+    @include mq(md){
+        height: rem(80);
+        font-size: rem(18);
+    }
+}

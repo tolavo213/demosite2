@@ -1,0 +1,26 @@
+@use '../global' as *;
+
+.breadcrumbs-wrap {
+    margin-top: rem(12);
+    margin-left: rem(20);
+
+    @include mq(md) {
+        margin-top: rem(16);
+        margin-left: calc(200 / 1520 * 100%);
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs span:not(:last-of-type) {
+    margin-right: rem(8);
+}
+
+.breadcrumbs span:not(:first-of-type) {
+    margin-left: rem(8);
+    position: relative;
+}

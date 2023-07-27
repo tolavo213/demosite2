@@ -1,0 +1,8 @@
+@use '../global' as *;
+
+.p-news-sidebar{
+    margin-top: rem(100);
+    @include mq(md){
+        margin-top: 0;
+    }
+}

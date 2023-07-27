@@ -1,0 +1,23 @@
+@use '../global' as *;
+
+
+/*丸の拡大*/
+.circle-bg{
+    position: fixed;
+	z-index:1000;
+    opacity: 0.7;
+    /*丸の形*/
+    width: rem(100);
+    height: rem(100);
+    border-radius: 50%;
+    background: $gray;
+    /*丸のスタート位置と形状*/
+	transform: scale(0);/*scaleをはじめは0に*/
+	right:rem(-50);
+    top:rem(-50);
+    transition: transform 1s;
+}
+
+.circle-bg.is-active{
+	transform: scale(30);
+}

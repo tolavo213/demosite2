@@ -1,0 +1,8 @@
+@use '../global' as *;
+
+.p-treatment-category{
+    margin-bottom: rem(100);
+    @include mq(md){
+        margin-bottom: rem(200);
+    }
+}

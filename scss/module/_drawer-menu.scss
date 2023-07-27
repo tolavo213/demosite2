@@ -1,0 +1,46 @@
+@use '../global' as *;
+
+.drawer-menu {
+    display: none;
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.drawer-menu.is-active{
+    display: block;
+}
+
+.drawer-menu__items {
+    width: rem(296);
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: rem(400);
+}
+
+.drawer-menu__item {
+    width: 100%;
+    border-bottom: 1px solid $white;
+}
+
+.drawer-menu__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: inherit;
+    padding-top: rem(23);
+    padding-bottom: rem(23);
+    font-size: rem(15);
+    line-height: calc(26 / 15);
+    color: $white;
+    font-weight: $medium;
+}

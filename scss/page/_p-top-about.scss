@@ -1,0 +1,70 @@
+@use '../global' as *;
+
+.p-top-about{
+    margin-top: rem(120);
+    @include mq(md){
+        margin-top: rem(160);
+    }
+}
+
+.p-top-about__body{
+    @include mq(md){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.p-top-about__img-wrap{
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    @include mq(md){
+        margin-left: initial;
+        margin-right: initial;
+        width: 50%;
+    }
+}
+.p-top-about__img{
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    @include mq(md){
+        max-width: none;
+        margin-right: initial;
+        margin-left: initial;
+        width: 100%;
+    }
+}
+
+.p-top-about__content{
+    margin-top: rem(60);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include mq(md){
+        width: 50%;
+        margin-top: 0;
+
+    }
+}
+
+.p-top-about__content-subtitle{
+    font-size:rem(20);
+    line-height: calc(20 / 20);
+    text-align: center;
+    margin-top: rem(40);
+}
+
+.p-top-about__content-text{
+    font-size:rem(14);
+    line-height: calc(24 / 14);
+    margin-top: rem(40);
+    text-align: center;
+}
+
+.p-top-about__btn-wrap{
+    margin-top: rem(60);
+    @include mq(md){
+        margin-top: rem(80);
+    }
+}

@@ -1,0 +1,65 @@
+@use '../global' as *;
+
+.subpage-header{
+    height: rem(220);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include mq(md){
+        height: rem(300);
+    }
+}
+
+
+.subpage-header__en-title{
+    font-size:rem(60);
+    line-height: calc(60 / 60);
+    color:$white;
+    text-transform: capitalize;
+    font-weight: $W3;
+    @include mq(md){
+        font-size: rem(80);
+    }
+}
+
+.subpage-header__title{
+    font-size:rem(16);
+    line-height: calc(16 / 16);
+    color:$white;
+    margin-top: rem(12);
+    font-weight: $W3;
+    @include mq(md){
+        font-size: rem(24);
+        margin-top: rem(12);
+    }
+}
+
+
+.subpage-header.subpage-header--about{
+    background-image: url("/wp-content/themes/watanabe-neurosurgery-clinic/img/about/about_header--sp.jpg");
+    @include mq(md){
+        background-image: url("/wp-content/themes/watanabe-neurosurgery-clinic/img/about/about_header--pc.jpg");
+    }
+}
+.subpage-header.subpage-header--treatment{
+    background-image: url("/wp-content/themes/watanabe-neurosurgery-clinic/img//treatment/treatment_header--sp.jpg");
+    @include mq(md){
+        background-image: url("/wp-content/themes/watanabe-neurosurgery-clinic/img//treatment/treatment_header--pc.jpg");
+    }
+}
+.subpage-header.subpage-header--news{
+    background-image: url("/wp-content/themes/watanabe-neurosurgery-clinic/img/news/news_header--sp.jpg");
+    @include mq(md){
+        background-image: url("/wp-content/themes/watanabe-neurosurgery-clinic/img/news/news_header--pc.jpg");
+    }
+}
+.subpage-header.subpage-header--contact{
+    background-image: url("/wp-content/themes/watanabe-neurosurgery-clinic/img/contact/contact_header--sp.jpg");
+    @include mq(md){
+        background-image: url("/wp-content/themes/watanabe-neurosurgery-clinic/img/contact/contact_header--pc.jpg");
+    }
+}
